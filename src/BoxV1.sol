@@ -5,6 +5,12 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/U
 import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
+/**
+ * @title BoxV1
+ * @author Alexander Scherbatyuk
+ * @notice A simple box contract that allows for the setting and retrieval of a number.
+ * @dev This contract is a simple box contract that allows for the setting and retrieval of a number.
+ */
 contract BoxV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     uint256 internal number;
 
