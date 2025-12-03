@@ -14,7 +14,7 @@ contract DeployBox is Script {
     function deployBox() public returns (address) {
         vm.startBroadcast();
         BoxV1 box = new BoxV1(); // implementation (Logic)
-        // need to deploy actional prozy contract, ERC1967Proxy
+        // need to deploy actual proxy contract, ERC1967Proxy
         ERC1967Proxy proxy = new ERC1967Proxy(address(box), "");
         vm.stopBroadcast();
         return address(proxy);
